@@ -6,7 +6,7 @@
 /*   By: emaksimo <emaksimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 19:08:06 by emaksimo          #+#    #+#             */
-/*   Updated: 2023/02/22 19:21:34 by emaksimo         ###   ########.fr       */
+/*   Updated: 2023/02/22 19:36:30 by emaksimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int main(void)
 {
 	int fd;
-	fd = open("alternate_line_nl_no_nl", O_RDWR);
+	fd = open("line_nl_no_nl", O_RDWR);
 	printf("gnl: %s",get_next_line(fd));
 	printf("gnl: %s",get_next_line(fd));
 	printf("gnl: %s",get_next_line(fd));
