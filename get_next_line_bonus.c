@@ -6,7 +6,7 @@
 /*   By: emaksimo <emaksimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 19:02:04 by emaksimo          #+#    #+#             */
-/*   Updated: 2023/02/22 18:21:49 by emaksimo         ###   ########.fr       */
+/*   Updated: 2023/02/22 22:08:31 by emaksimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static char	*ft_reserv(char *reserve)
 	i = 0;
 	while (reserve[i] && reserve[i] != '\n')
 		i++;
-	if (!reserve[i])
+	if ((!reserve) || (!reserve[i]))
 	{
 		free(reserve);
 		return (NULL);
@@ -44,7 +44,7 @@ static char	*ft_get_line(char *reserve)
 	char	*str;
 
 	i = 0;
-	if (!reserve[i])
+	if ((!reserve) || (!reserve[i]))
 		return (NULL);
 	while (reserve[i] && reserve[i] != '\n')
 		i++;
@@ -93,9 +93,9 @@ static char	*ft_rd_reserv(int fd, char *reserve)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*reserve[257];
+	static char	*reserve[OPEN_MAX];
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 256)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > OPEN_MAX)
 		return (0);
 	reserve[fd] = ft_rd_reserv(fd, reserve[fd]);
 	if (!reserve[fd])
