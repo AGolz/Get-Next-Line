@@ -28,7 +28,8 @@ This project is dedicated to a convenient feature in [Left.a](https://github.com
     </tr>
 	<tr>
       <td> Return value </td>
-      <td> Read line: correct behavior; NULL: there is nothing else to read, or an error occurred</td>
+      <td> Read line: correct behavior
+      NULL: there is nothing else to read, or an error occurred</td>
     </tr>
 	<tr>
       <td> External functs </td>
