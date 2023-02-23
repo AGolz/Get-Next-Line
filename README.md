@@ -62,6 +62,6 @@ cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 <files>.c
  - The `get_next_line()` function has undefined behavior when reading a binary file.
 
 #### Forbidden
-- It is not allowed to use your libft in this project.
+- It is not allowed to use your `libft` in this project.
 - `lseek()` is forbidden.
 - Global variables are prohibited.
