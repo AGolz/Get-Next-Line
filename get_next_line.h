@@ -6,7 +6,7 @@
 /*   By: emaksimo <emaksimo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:16:12 by emaksimo          #+#    #+#             */
-/*   Updated: 2023/02/22 22:06:53 by emaksimo         ###   ########.fr       */
+/*   Updated: 2023/02/23 14:48:39 by emaksimo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 
 # ifndef BUFFER_SIZE
-#	define BUFFER_SIZE 42
+#  define BUFFER_SIZE 42
 # endif
 
 size_t	ft_strlen(const char *str);
