@@ -4,6 +4,8 @@
 
 **Actual Status :** Finished 
 
+**Result :** 125%
+
 [![emaksimo's 42 get_next_line Score](https://badge42.vercel.app/api/v2/cldj7z84000110gl2ubikd2sh/project/2994181)](https://github.com/JaeSeoKim/badge42)
 
 This project is dedicated to a convenient feature in [Left.a](https://github.com/AGolz/Libft_42Yerevan) collection, it helps to learn a very interesting thing in C programming: static variables.
