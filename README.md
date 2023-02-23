@@ -65,3 +65,20 @@ cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 <files>.c
 - It is not allowed to use your `libft` in this project.
 - `lseek()` is forbidden.
 - Global variables are prohibited.
+
+## Bonus part:
+
+Here are the requirements for the bonus part:
+ - Only one static variable should be used in `get_next_line()`.
+ - `get_next_line()` must manage multiple file descriptors at the same time.
+
+In addition to the required details file, the following files must be passed
+• get_next_line_bonus.c
+• get_next_line_bonus.h
+• get_next_line_utils_bonus.c
+
+**[Project instructions](https://github.com/AGolz/Get-Next-Line/files/10813008/en.subject.1.pdf)**
+
+Need help: emaksimo@student.42yerevan.am
+
+Special thanks: [tripouille](https://github.com/Tripouille) for the [gnlTester](https://github.com/Tripouille/gnlTester) (:
