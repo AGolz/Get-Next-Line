@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emaksimo <emaksimo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elmaksim <elmaksim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/21 18:59:44 by emaksimo          #+#    #+#             */
-/*   Updated: 2023/02/22 19:02:29 by emaksimo         ###   ########.fr       */
+/*   Created: 2024/01/24 13:23:20 by elmaksim          #+#    #+#             */
+/*   Updated: 2024/01/24 14:59:14 by elmaksim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strchr(const char *str, int ch)
 		if (str[i] == (char) ch)
 			return ((char *)&str[i]);
 		i++;
-	}	
+	}
 	return (NULL);
 }
 
@@ -49,10 +49,10 @@ char	*ft_strjoin(char *str_1, char *str_2)
 	if (!str_1)
 	{
 		str_1 = (char *)malloc(1 * sizeof(char));
+		if (!str_1 || !str_2)
+			return (NULL);
 		str_1[0] = '\0';
 	}
-	if (!str_1 || !str_2)
-		return (NULL);
 	str = malloc((ft_strlen(str_1) + ft_strlen(str_2) + 1) * sizeof(char));
 	if (str == NULL)
 		return (NULL);

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emaksimo <emaksimo@student.42.fr>          +#+  +:+       +#+        */
+/*   By: elmaksim <elmaksim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/21 17:19:18 by emaksimo          #+#    #+#             */
-/*   Updated: 2023/02/24 01:10:16 by emaksimo         ###   ########.fr       */
+/*   Created: 2024/01/24 13:23:27 by elmaksim          #+#    #+#             */
+/*   Updated: 2024/01/24 13:40:37 by elmaksim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char	*ft_reserv(char *reserve)
+static char	*ft_reserve(char *reserve)
 {
 	int		i;
 	int		c;
@@ -68,22 +68,22 @@ static char	*ft_get_line(char *reserve)
 
 static char	*ft_rd_reserv(int fd, char *reserve)
 {
-	int		rd_byt;
-	char	*buf;
+	ssize_t		rd_byte;
+	char		*buf;
 
 	buf = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buf)
 		return (NULL);
-	rd_byt = 1;
-	while (!ft_strchr(reserve, '\n') && rd_byt != 0)
+	rd_byte = 1;
+	while (!ft_strchr(reserve, '\n') && rd_byte != 0)
 	{
-		rd_byt = read(fd, buf, BUFFER_SIZE);
-		if (rd_byt == -1)
+		rd_byte = read(fd, buf, BUFFER_SIZE);
+		if (rd_byte == -1)
 		{
 			free(buf);
 			return (NULL);
 		}
-		buf[rd_byt] = '\0';
+		buf[rd_byte] = '\0';
 		reserve = ft_strjoin(reserve, buf);
 	}
 	free(buf);
@@ -96,11 +96,11 @@ char	*get_next_line(int fd)
 	static char	*reserve;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
-		return (0);
+		return (NULL);
 	reserve = ft_rd_reserv(fd, reserve);
 	if (!reserve)
 		return (NULL);
 	line = ft_get_line(reserve);
-	reserve = ft_reserv(reserve);
+	reserve = ft_reserve(reserve);
 	return (line);
 }
