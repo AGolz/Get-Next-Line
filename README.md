@@ -6,8 +6,6 @@
 
 **Result :** 125%
 
-[![emaksimo's 42 get_next_line Score](https://badge42.vercel.app/api/v2/cldj7z84000110gl2ubikd2sh/project/2994181)](https://github.com/JaeSeoKim/badge42)
-
 This project is dedicated to a convenient feature in [Left.a](https://github.com/AGolz/Libft_42Yerevan) collection, it helps to learn a very interesting thing in C programming: static variables.
 
 ## The main part:
@@ -81,8 +79,29 @@ In addition to the required details file, the following files must be passed
 • get_next_line_bonus.h
 • get_next_line_utils_bonus.c
 
+## Running tests
+
+### The main part:
+
+```
+cc -Wall -Wextra -Werror get_next_line.h get_next_line.c get_next_line_utils.c main.c 
+```
+./a.out [file name] [buffer size] 
+
+Example:
+```
+./a.out test_1 32 test_2 64 test_3 128
+```
+ ## The bonus part:
+
+```
+cc -Wall -Wextra -Werror get_next_line_bonus.h main_bonus.c get_next_line_bonus.c get_next_line_utils_bonus.c
+./a.out
+```
+You can add or change the buffer size in the `main_bonus.c` file.
+
 **[Project instructions](https://github.com/AGolz/Get-Next-Line/files/10813008/en.subject.1.pdf)**
 
-Need help: emaksimo@student.42yerevan.am
+Need help: elmaksim@student.42yerevan.am
 
 Special thanks: [tripouille](https://github.com/Tripouille) for the [gnlTester](https://github.com/Tripouille/gnlTester) (:
